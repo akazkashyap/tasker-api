@@ -16,7 +16,6 @@ router.post("/signup", async (req, res) => {
         await user.save()
         res.status(201).send({ user })
     } catch (error) {
-        console.log(error)
         res.status(422).send({ error: "Bad request. Try again." })
     }
 
@@ -27,12 +26,15 @@ router.post("/login", async (req, res) => {
         const user = await User.findByCredentails(
             email = req.body.email, password = req.body.password
         )
+        if (!user) {
+            return res.status(400).send({ error: "Wrong Credentials" })
+        }
         const token = user.genAuthToken()
         user.tokens = user.tokens.concat({ token: token })
         await user.save()
         res.status(200).send({ user, token })
     } catch (error) {
-        res.status(400)
+        res.status(500)
     }
 })
 

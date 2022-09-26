@@ -1,0 +1,120 @@
+{
+    "config": {
+        "adapter": [Function xhrAdapter
+        ],
+        "baseURL": "https://trakerx.herokuapp.com",
+        "data": "{\"email\":\"akaz@gmail.com\",\"password\":\"qwertyuiop\"}",
+        "env": {
+            "FormData": null
+        },
+        "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        },
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "/signup",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": {
+        "user": {
+            "__v": 0,
+            "_id": "633011da6fdceb150716a513",
+            "createdAt": "2022-09-25T08:31:22.672Z",
+            "email": "akaz@gmail.com",
+            "updatedAt": "2022-09-25T08:31:22.672Z"
+        }
+    },
+    "headers": {
+        "connection": "keep-alive",
+        "content-length": "154",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Sep 2022 08:31:22 GMT",
+        "etag": "W/\"9a-pO2Y9MIxmDp+Z0N9VPasW3iazcI\"",
+        "server": "Cowboy",
+        "via": "1.1 vegur",
+        "x-powered-by": "Express"
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "connection": "keep-alive",
+            "content-length": "154",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Sun, 25 Sep 2022 08:31:22 GMT",
+            "etag": "W/\"9a-pO2Y9MIxmDp+Z0N9VPasW3iazcI\"",
+            "server": "Cowboy",
+            "via": "1.1 vegur",
+            "x-powered-by": "Express"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_https://trakerx.herokuapp.com/signup",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "{\"user\":{\"email\":\"akaz@gmail.com\",\"_id\":\"633011da6fdceb150716a513\",\"createdAt\":\"2022-09-25T08:31:22.672Z\",\"updatedAt\":\"2022-09-25T08:31:22.672Z\",\"__v\":0}}",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "https://trakerx.herokuapp.com/signup",
+        "readyState": 4,
+        "responseHeaders": {
+            "Connection": "keep-alive",
+            "Content-Length": "154",
+            "Content-Type": "application/json; charset=utf-8",
+            "Date": "Sun, 25 Sep 2022 08:31:22 GMT",
+            "Etag": "W/\"9a-pO2Y9MIxmDp+Z0N9VPasW3iazcI\"",
+            "Server": "Cowboy",
+            "Via": "1.1 vegur",
+            "X-Powered-By": "Express"
+        },
+        "responseURL": "https://trakerx.herokuapp.com/signup",
+        "status": 201,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 201,
+    "statusText": undefined
+}
