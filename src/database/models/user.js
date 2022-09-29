@@ -59,13 +59,11 @@ userSchema.methods.genAuthToken = function () {
 
 userSchema.statics.findByCredentails = async (email, password) => {
     const user = await User.findOne({ email })
-    if (user) {
-        const permit = await bcrypt.compare(password, user.password)
-        return permit ? user : null
+    if (!user) {
+        return false
     }
-    else {
-        throw new Error({ error: "Wrong Credentials." })
-    }
+    const permit = await bcrypt.compare(password, user.password)
+    return permit ? user : null
 }
 
 const User = mongoose.model("User", userSchema)

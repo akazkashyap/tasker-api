@@ -24,7 +24,8 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
     try {
         const user = await User.findByCredentails(
-            email = req.body.email, password = req.body.password
+            email = req.body.email,
+            password = req.body.password
         )
         if (!user) {
             return res.status(400).send({ error: "Wrong Credentials" })
@@ -34,6 +35,7 @@ router.post("/login", async (req, res) => {
         await user.save()
         res.status(200).send({ user, token })
     } catch (error) {
+        console.log(error)
         res.status(500)
     }
 })
